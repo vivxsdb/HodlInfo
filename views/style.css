@@ -1,0 +1,300 @@
+body {
+  background-color: black;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+:root {
+  --bk: black;
+  --wt: white;
+  --gy: grey;
+  --cw: #FBFBF9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.logo h1 {
+  color: aquamarine;
+  margin-left: 20px;
+}
+
+.opt {
+  color: green;
+}
+
+select {
+  background-color: var(--gy);
+  padding: 7px;
+  color: var(--wt);
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+select option {
+  background-color: var(--wt);
+  color: var(--bk);
+}
+
+.linker {
+  margin-left: 5px;
+  background-color: var(--gy);
+  padding: 8px;
+  padding-left: 13px;
+  padding-right: 13px;
+  color: var(--wt);
+  font-weight: 550;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.linker a {
+  text-decoration: none;
+  color: var(--wt);
+  background: var(--gy);
+}
+
+.switch {
+  position: relative;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: var(--gy);
+  transition: all 0.3s ease;
+}
+
+.switch:checked {
+  background-color: var(-wt);
+}
+
+.switch::before {
+  position: absolute;
+  content: "";
+  left: calc(1.5rem - 1.6rem);
+  top: calc(1.5rem - 1.6rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  background-color: #27E1C1;
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all 0.3s ease;
+}
+
+.switch:checked:before {
+  transform: translateX(100%);
+}
+
+.but {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.telegram button {
+  background-color: #27E1C1;
+  font-size: 1.1rem;
+  padding: 8px;
+  color: var(--wt);
+  font-weight: 600px;
+  border-radius: 10px;
+}
+
+.tog {
+  margin-left: 7px;
+  margin-top: 6px;
+}
+
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bestPrice .percentage {
+  font-size: 5rem;
+  color: var(--wt);
+}
+
+.bestPrice .price {
+  font-size: 2rem;
+}
+
+.bestPrice .pername {
+  font-size: 1.3rem;
+}
+
+.middle div {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percentage {
+  color: #0EA293;
+  font-size: 3rem;
+}
+
+.pername,
+.price {
+  font-size: 1.5rem;
+  color: var(--gy);
+}
+
+.dataTable {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  font-size: 1.5rem;
+}
+
+th {
+  background: var(--bk);
+  color: var(--gy);
+}
+
+tr {
+  background-color: #3A3B3C;
+  color: var(--wt);
+  font-weight: 500;
+}
+
+th,
+td {
+  width: 300px;
+  text-align: center;
+  padding: 5px;
+}
+
+.add {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 27%;
+  border: 2px solid #0EA293;
+  border-radius: 5px;
+  background-color: var(--bk);
+  color: #0EA293;
+  font-size: 1.2rem;
+  padding: 7px;
+}
+
+.add:hover {
+  background-color: #0EA293;
+  color: var(--wt);
+}
+
+.right {
+  position: relative;
+  float: right;
+  color: var(--gy);
+  bottom: 10px;
+}
+
+.left {
+  position: relative;
+  float: left;
+  color: var(--gy);
+  bottom: 10px;
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .logo h1 {
+    margin-left: 10px;
+  }
+
+  select,
+  .linker {
+    font-size: 0.6rem;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .bestPrice .percentage {
+    font-size: 2.5rem;
+  }
+
+  .bestPrice .price {
+    font-size: 1rem;
+  }
+
+  .bestPrice .pername {
+    font-size: 0.9rem;
+  }
+
+  .middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .middle div {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .percentage {
+    color: #0EA293;
+    font-size: 2rem;
+  }
+
+  .pername,
+  .price {
+    font-size: 1.5rem;
+    color: var(--gy);
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    width: 150px;
+    padding: 2px;
+  }
+
+  .add {
+    font-size: 0.6rem;
+    padding: 5px;
+    margin-left: 5%;
+  }
+}

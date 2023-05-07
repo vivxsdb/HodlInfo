@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>HodlInfo</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1>HODLINFO</h1>
+      </div>
+      <div class="opt">
+        <select>
+          <option selected value="INR">INR</option>
+        </select>
+        <select>
+          <option selected value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="USDT">USDT</option>
+          <option value="XRP">XRP</option>
+          <option value="TRX">TRX</option>
+          <option value="DASH">DASH</option>
+          <option value="ZEC">ZEC</option>
+          <option value="XEM">XEM</option>
+          <option value="IOST">IOST</option>
+          <option value="WIN">WIN</option>
+          <option value="BIT">BIT</option>
+          <option value="WRX">WRX</option>
+        </select>
+        <button class="linker"><a href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn">BUY USDT</a></button>
+      </div>
+      <div class="but">
+        <div class="timer"></div>
+        <div class="telegram">
+          <button>Connect Telegram</button>
+        </div>
+        <div class="tog">
+          <input class="switch" type="checkbox" />
+        </div>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="mins">
+        <div class="percentage">0.18%</div>
+        <div class="pername">5 Mins</div>
+      </div>
+      <div class="hour">
+        <div class="percentage">0.81%</div>
+        <div class="pername">1 Hour</div>
+      </div>
+      <div class="bestPrice">
+        <div class="price">Best Price to Trade</div>
+        <div class="percentage">₹ 26,92,357</div>
+        <div class="pername">Average BTC/INR net price including commission</div>
+      </div>
+      <div class="day">
+        <div class="percentage">6.48%</div>
+        <div class="pername">1 Day</div>
+      </div>
+      <div class="days">
+        <div class="percentage">6.48%</div>
+        <div class="pername">7 Days</div>
+      </div>
+    </div>
+    <div class="dataTable">
+      <table class="Crypto_data">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Platform</th>
+            <th>Last Trade Price</th>
+            <th>Buy / Sell price</th>
+            <th>Difference</th>
+            <th>Saving</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% x.forEach((ticker, index) => { %>
+            <tr>
+              <td class="td1"><%= index + 1 %></td>
+              <td><%= ticker.name %></td>
+              <td><%= ticker.last %></td>
+              <td><%= ticker.buy %> / <%= ticker.sell %></td>
+              <td><%= ticker.volume %></td>
+              <td><%= ticker.base_unit %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <hr/>
+       <p class="left">Copyright © 2019 HodlInfo.com</p>
+       <p class="right">Support</p>
+      <button class="add">Add hodlinfo to home screen</button>
+    </div>
+  </body>
+</html>
